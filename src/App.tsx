@@ -1,14 +1,24 @@
-import React from 'react';
 import './index.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import SignIn from './Components/Form/Client/SignInForm';
+import SignUp from './Components/Form/Client/SignUpForm';
+import Profile from './Layouts/Client/Profile';
 import Header from './Layouts/Client/Header';
-import Body from './Layouts/Client/Body';
 import Footer from './Layouts/Client/Footer';
+import Home from './Layouts/Client/Home';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <Footer />
+      <BrowserRouter>
+        <Route path="/" >
+          <Header />
+          <Home />
+        </Route>
+        <Route path="/signin"><SignIn /></Route>
+        <Route path="/signup"><SignUp /></Route>
+        <Route path="/profile" ><Profile /></Route>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

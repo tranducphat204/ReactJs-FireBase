@@ -8,15 +8,17 @@ import Footer from './Layouts/Client/Footer';
 import Home from './Layouts/Client/Home';
 function App() {
   return (
-    <div className="App">
+    <div className="App lg:px-36 sm:px-6 md:px-6">
       <BrowserRouter>
         <Route path="/" >
           <Header />
           <Home />
         </Route>
-        <Route path="/signin"><SignIn /></Route>
-        <Route path="/signup"><SignUp /></Route>
-        <Route path="/profile" ><Profile /></Route>
+        <div className='lg:py-10 sm:py-4 md:py-6'>
+          <Route path="/signin"><SignIn /></Route>
+          <Route path="/signup"><SignUp /></Route>
+          <Route path="/profile" ><Profile /></Route>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>

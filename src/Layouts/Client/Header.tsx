@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <header className="bg-white">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-screen-xl ">
                 <div className="flex h-16 items-center justify-between">
                     <div className="md:flex md:items-center md:gap-12">
                         <Link className="block text-teal-600" to="/">
@@ -46,7 +46,7 @@ function Header() {
                     <div className="flex items-center gap-4">
                         <div className="sm:flex sm:gap-4">
                             <Link
-                                className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                                className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-transparent hover:text-teal-600 "
                                 to="/signin"
                             >
                                 Login
@@ -54,7 +54,7 @@ function Header() {
 
                             <div className="hidden sm:flex">
                                 <Link
-                                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 hover:bg-teal-600 hover:text-white "
                                     to="signup"
                                 >
                                     Register

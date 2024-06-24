@@ -22,7 +22,7 @@ const SignIn: React.FC = () => {
                 console.error('Error signing in:', error);
             });
     };
-    
+
     const handleGoogleSignInWithGG = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
